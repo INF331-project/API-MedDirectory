@@ -42,8 +42,8 @@ const doctorRegister = async (req, res, next) => {
             experience,
             avatarImage
         });
-        const token = jwt.sign({ id: doctor._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
-        res.status(201).json({ token });
+        // const token = jwt.sign({ id: doctor._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+        res.status(201).json({ message: "Doctor created successfully" });
     } catch (error) {
         next(error);
     };
